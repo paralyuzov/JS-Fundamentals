@@ -18,7 +18,6 @@ function legendaryFarming(data) {
 
         switch (material) {
             case "shards":
-
                 legendaryItems["Shadowmourne"]["shards"] += quantity;
 
                 if (legendaryItems["Shadowmourne"][material] >= 250) {
@@ -46,7 +45,7 @@ function legendaryFarming(data) {
 
                 if (legendaryItems["Dragonwrath"][material] >= 250) {
 
-                    console.log(`Dragonwrath is obtained!`);
+                    console.log(`Dragonwrath obtained!`);
                     legendaryItems["Dragonwrath"][material] = legendaryItems["Dragonwrath"][material] - 250;
                     isItReach = true;
                 }
@@ -71,7 +70,7 @@ function legendaryFarming(data) {
         tempArr.push(array)
 
     }
-    console.table(tempArr)
+
     let sortLegendary = tempArr.sort((a, b) => b[0][1] - a[0][1] || a[0][0].localeCompare(b[0][0]));
     sortLegendary.forEach(element => console.log(`${element[0][0]}: ${element[0][1]}`))
     let arrJunk = Array.from(junk);
